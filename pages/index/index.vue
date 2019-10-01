@@ -11,27 +11,33 @@
     <!-- 分割区域 -->
     <divider></divider>
     <!-- 全局Card组件 -->
-    <view class="card">
-      <!-- 标题 -->
-      <view 
-        class="font-md font-weight p-2 border-bottom c-main-bd"
-      >wzjNB</view>
-      <!-- 内容 -->
+    <card :headTitle="'wzjNB'"></card>
+    <!-- 公共列表组件 -->
+    <view class="row">
       <view>
-        <!-- 图片 -->
         <image 
-          src="../../static/images/demo/demo4.jpg" 
-          mode="widthFix">
-        </image>
+          class="common-list-image"
+          src="../../static/images/demo/list/1.jpg" 
+          mode="widthFix"
+          lazy-load
+        ></image>
+       <view class="px-2">
+         <view class="font-md">米家空调</view>
+         <text class="font text-light-muted">wzjNB</text>
+         <view class="d-flex">
+           <price>1399</price>
+           <view class="font-sm text-light-muted line-through a-self-end">$2699</view>
+         </view>
+       </view>
       </view>
     </view>
 	</view>
 </template>
 
 <script>
-  import IndexSwiper from '../../components/index/IndexSwiper.vue'
-  import IndexNav from '../../components/index/IndexNav.vue'
-  import IndexThreeAdv from '../../components/index/IndexThreeAdv.vue'
+  import IndexSwiper from '@/components/index/IndexSwiper.vue'
+  import IndexNav from '@/components/index/IndexNav.vue'
+  import IndexThreeAdv from '@/components/index/IndexThreeAdv.vue'
   
 
 	export default {
@@ -81,5 +87,7 @@
 
 <style lang="stylus">
 .content
-  padding-bottom: 100upx;
+  padding-bottom: 1000upx;
+  .common-list-image
+    width: 372.5upx;
 </style>

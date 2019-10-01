@@ -11,7 +11,11 @@ image{
   width: 100%;
   height: 100%;
 }
+/* 颜色 */
 /* 主边框颜色 */
+.c-main{
+  color: #FD6801;
+}
 .c-main-bd{
   border-color: #f1f1f1;
 }
