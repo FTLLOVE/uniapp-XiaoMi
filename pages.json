@@ -2,36 +2,37 @@
   "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
       "path": "pages/index/index",
-      "style": {        
-       "app-plus":{
-         "scrollIndicator":"none",
-         "titleNView":{
-           "searchInput":{
-             "align":"left",
-             "backgroundColor":"#F7F7F7",
-             "borderRadius":"4px",
-             "disabled": true,
-             "placeholder":"智能积木  越野四驱车",
-             "placeholderColor":"#cccccc"             
-           },
-           "buttons":[{
-             "color":"#989898",
-             "colorPressed":"#FD6801",
-             "float":"left",
-             "fontSize":"22px",
-             "fontSrc":"/static/font/iconfont.ttf",
-             "text":"\ue67a"
-           },
-           {
-             "color":"#989898",
-             "colorPressed":"#FD6801",
-             "float":"right",
-             "fontSize":"22px",
-             "fontSrc":"/static/font/iconfont.ttf",
-             "text":"\ue661"
-           }]
-         }
-       }
+      "style": {
+        "app-plus": {
+          "scrollIndicator": "none",
+          "titleNView": {
+            "searchInput": {
+              "align": "left",
+              "backgroundColor": "#F7F7F7",
+              "borderRadius": "4px",
+              "disabled": true,
+              "placeholder": "智能积木  越野四驱车",
+              "placeholderColor": "#cccccc"
+            },
+            "buttons": [{
+                "color": "#989898",
+                "colorPressed": "#FD6801",
+                "float": "left",
+                "fontSize": "22px",
+                "fontSrc": "/static/font/iconfont.ttf",
+                "text": "\ue67a"
+              },
+              {
+                "color": "#989898",
+                "colorPressed": "#FD6801",
+                "float": "right",
+                "fontSize": "22px",
+                "fontSrc": "/static/font/iconfont.ttf",
+                "text": "\ue661"
+              }
+            ]
+          }
+        }
       }
     }
     // 购物车
@@ -50,34 +51,60 @@
       "style": {}
     }
     // 搜索页
-      ,{
-            "path" : "pages/search/search",
-            "style" : {
-              "app-plus":{
-                "scrollIndicator":"none",
-                "titleNView":{
-                  "searchInput":{
-                    "align":"left",
-                    "backgroundColor":"#F7F7F7",
-                    "borderRadius":"4px",
-                    "disabled": false,
-                    "placeholder":"智能积木  越野四驱车",
-                    "placeholderColor":"#cccccc"             
-                  },
-                  "buttons":[
-                  {
-                    "color":"#989898",
-                    "colorPressed":"#FD6801",
-                    "float":"right",
-                    "fontSize":"16px",
-                    "fontSrc":"/static/font/iconfont.ttf",
-                    "text":"搜索"
-                  }]
-                }
-              }
-            }
+    , {
+      "path": "pages/search/search",
+      "style": {
+        "app-plus": {
+          "scrollIndicator": "none",
+          "titleNView": {
+            "searchInput": {
+              "align": "left",
+              "backgroundColor": "#F7F7F7",
+              "borderRadius": "4px",
+              "disabled": false,
+              "placeholder": "智能积木  越野四驱车",
+              "placeholderColor": "#cccccc"
+            },
+            "buttons": [{
+              "color": "#989898",
+              "colorPressed": "#FD6801",
+              "float": "right",
+              "fontSize": "16px",
+              "fontSrc": "/static/font/iconfont.ttf",
+              "text": "搜索"
+            }]
+          }
         }
-    ],
+      }
+    }, 
+    // 搜索列表
+    {
+      "path": "pages/search-list/search-list",
+      "style": {
+        "app-plus": {
+          "scrollIndicator": "none",
+          "titleNView": {
+            "searchInput": {
+              "align": "left",
+              "backgroundColor": "#F7F7F7",
+              "borderRadius": "4px",
+              "disabled": false,
+              "placeholder": "智能积木  越野四驱车",
+              "placeholderColor": "#cccccc"
+            },
+            "buttons": [{
+              "color": "#989898",
+              "colorPressed": "#FD6801",
+              "float": "right",
+              "fontSize": "16px",
+              "fontSrc": "/static/font/iconfont.ttf",
+              "text": "搜索"
+            }]
+          }
+        }
+      }
+    }
+  ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",

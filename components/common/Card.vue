@@ -2,7 +2,8 @@
   <view class="card">
     <!-- header -->
     <view 
-      class="p-2 border-bottom c-main-bd"
+      class="p-2 c-main-bd"
+      :class="getHeadClass"
     >
       <slot name="head">
         <text class="font-md font-weight">{{headTitle}}</text>
@@ -16,7 +17,7 @@
         :src="bodyImage" 
         mode="widthFix">
       </image>
-      <slot name="body"></slot>
+      <slot></slot>
     </view>
   </view>
 </template>
@@ -25,7 +26,18 @@
   export default {
     props:{
       headTitle: String,
-      bodyImage: String
+      bodyImage: String,
+      // 是否显示下边线
+      borderBottom:{
+        type: Boolean,
+        default: true
+      }
+    },
+    computed:{
+      getHeadClass(){
+        let borderBottom = this.borderBottom? 'border-bottom':''
+        return `${borderBottom}`
+      }
     }
   }
 </script>
