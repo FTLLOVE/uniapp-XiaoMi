@@ -7,9 +7,11 @@ Vue.config.productionTip = false
 import Divider from '@/components/common/Divider.vue';
 import Card from '@/components/common/Card.vue';
 import Price from '@/components/common/Price.vue';
+import Loading from '@/components/common/Loading.vue';
 Vue.component('Divider',Divider)
 Vue.component('Card',Card)
 Vue.component('Price',Price)
+Vue.component('Loading',Loading)
 
 
 App.mpType = 'app'

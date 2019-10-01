@@ -16,6 +16,12 @@ image{
 .c-main{
   color: #FD6801;
 }
+.bgc-main{
+  background-color: #FD6801;
+}
+.bgc-hover{
+background-color: rgba(253,104,1,0.85);
+}
 .c-main-bd{
   border-color: #f1f1f1;
 }

@@ -4,6 +4,7 @@
     autoplay 
     :interval="3000" 
     :duration="1000"
+    :style="getStyle"
     circular
    >
     <block
@@ -11,7 +12,10 @@
       :key = "idx"
     >
       <swiper-item>
-        <view class="swiper-item" @tap="navigate(idx)">
+        <view 
+          class="swiper-item" 
+          :style="getStyle"
+          @tap="imagePreview(idx)">
           <image            
             :src="item.src" 
             mode="widthFix"
@@ -27,11 +31,39 @@
 <script>
   export default {
     props:{
-      swipers:Array
+      swipers:Array,
+      height:{
+        type: String,
+        default: "350rpx"
+      },
+      preview:{
+        type: Boolean,
+        default: false
+      }
+    },
+    computed:{
+      getStyle(){
+        return `height:${this.height}rpx`
+      },
+      getUrls(){
+         let arr = this.swipers.map(item=>item.src)
+         
+         return arr
+      }
     },
     methods:{
       navigate(item){
         console.log(item);
+      },
+      // 图片预览功能
+      imagePreview(item,idx){
+        if(this.preview){
+          return uni.previewImage({
+            current:idx,
+            urls: this.getUrls,
+            indicator:'default'
+          })
+        }
       }
     }
   }
