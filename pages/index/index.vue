@@ -10,6 +10,21 @@
     <index-three-adv :threeAdv="threeAdv"></index-three-adv>
     <!-- 分割区域 -->
     <divider></divider>
+    <!-- 全局Card组件 -->
+    <view class="card">
+      <!-- 标题 -->
+      <view 
+        class="font-md font-weight p-2 border-bottom c-main-bd"
+      >wzjNB</view>
+      <!-- 内容 -->
+      <view>
+        <!-- 图片 -->
+        <image 
+          src="../../static/images/demo/demo4.jpg" 
+          mode="widthFix">
+        </image>
+      </view>
+    </view>
 	</view>
 </template>
 
@@ -65,5 +80,6 @@
 </script>
 
 <style lang="stylus">
-
+.content
+  padding-bottom: 100upx;
 </style>
