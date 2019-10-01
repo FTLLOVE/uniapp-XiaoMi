@@ -13,24 +13,7 @@
     <!-- 全局Card组件 -->
     <card :headTitle="'wzjNB'"></card>
     <!-- 公共列表组件 -->
-    <view class="row">
-      <view>
-        <image 
-          class="common-list-image"
-          src="../../static/images/demo/list/1.jpg" 
-          mode="widthFix"
-          lazy-load
-        ></image>
-       <view class="px-2">
-         <view class="font-md">米家空调</view>
-         <text class="font text-light-muted">wzjNB</text>
-         <view class="d-flex">
-           <price>1399</price>
-           <view class="font-sm text-light-muted line-through a-self-end">$2699</view>
-         </view>
-       </view>
-      </view>
-    </view>
+    <common-list :commonList ="commonList"></common-list>
 	</view>
 </template>
 
@@ -38,13 +21,14 @@
   import IndexSwiper from '@/components/index/IndexSwiper.vue'
   import IndexNav from '@/components/index/IndexNav.vue'
   import IndexThreeAdv from '@/components/index/IndexThreeAdv.vue'
-  
+  import CommonList from '@/components/common/CommonList.vue'
 
 	export default {
     components:{
       IndexSwiper,
       IndexNav,
-      IndexThreeAdv
+      IndexThreeAdv,
+      CommonList
     },
 		data() {
 			return {
@@ -73,7 +57,29 @@
           smallBottom:{
             src:"../../static/images/demo/demo2.jpg"
           }
-        }
+        },
+        // 公共列表数据
+        commonList:[{
+          cover:'../../static/images/demo/list/1.jpg',
+          title:"米家空调",
+          desc:"1.5匹变频",
+          oprice:2699,
+          pprice: 1399
+        },
+        {
+          cover:'../../static/images/demo/list/1.jpg',
+          title:"米家空调",
+          desc:"1.5匹变频",
+          oprice:2699,
+          pprice: 1399
+        },
+        {
+          cover:'../../static/images/demo/list/1.jpg',
+          title:"米家空调",
+          desc:"1.5匹变频",
+          oprice:2699,
+          pprice: 1399
+        }]
 			}
 		},
 		onLoad() {
@@ -88,6 +94,5 @@
 <style lang="stylus">
 .content
   padding-bottom: 1000upx;
-  .common-list-image
-    width: 372.5upx;
+  
 </style>
