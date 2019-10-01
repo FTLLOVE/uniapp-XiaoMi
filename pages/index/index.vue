@@ -4,6 +4,8 @@
     <index-swiper :swipers="swipers"></index-swiper>
     <!-- 分类图标 -->
     <index-nav :classList="classList"></index-nav>
+    <!-- 分割区域 -->
+    <divider></divider>
 	</view>
 </template>
 
@@ -13,7 +15,7 @@
 	export default {
     components:{
       IndexSwiper,
-      IndexNav
+      IndexNav      
     },
 		data() {
 			return {
