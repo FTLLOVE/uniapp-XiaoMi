@@ -49,7 +49,35 @@
       "path": "pages/mine/mine",
       "style": {}
     }
-  ],
+    // 搜索页
+      ,{
+            "path" : "pages/search/search",
+            "style" : {
+              "app-plus":{
+                "scrollIndicator":"none",
+                "titleNView":{
+                  "searchInput":{
+                    "align":"left",
+                    "backgroundColor":"#F7F7F7",
+                    "borderRadius":"4px",
+                    "disabled": false,
+                    "placeholder":"智能积木  越野四驱车",
+                    "placeholderColor":"#cccccc"             
+                  },
+                  "buttons":[
+                  {
+                    "color":"#989898",
+                    "colorPressed":"#FD6801",
+                    "float":"right",
+                    "fontSize":"16px",
+                    "fontSrc":"/static/font/iconfont.ttf",
+                    "text":"搜索"
+                  }]
+                }
+              }
+            }
+        }
+    ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",

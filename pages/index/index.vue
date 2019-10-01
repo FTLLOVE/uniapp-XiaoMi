@@ -85,6 +85,13 @@
 		onLoad() {
 
 		},
+    // 监听原生点击事件
+    onNavigationBarSearchInputClicked(e) {      
+        uni.navigateTo({
+          url:'../search/search'
+        })
+      
+    },
 		methods: {
       
 		}
