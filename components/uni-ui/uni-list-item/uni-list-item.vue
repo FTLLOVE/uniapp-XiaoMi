@@ -1,12 +1,13 @@
 <template>
 	<view :class="disabled ? 'uni-list-item--disabled' : ''" :hover-class="disabled || showSwitch ? '' : 'uni-list-item--hover'" class="uni-list-item" @click="onClick">
 		<view class="uni-list-item__container">
+      <slot></slot>
 			<view v-if="thumb" class="uni-list-item__icon">
 				<image :src="thumb" class="uni-list-item__icon-img" />
 			</view>
 			<view v-else-if="showExtraIcon" class="uni-list-item__icon">
 				<uni-icon class="uni-icon-wrapper" :color="extraIcon.color" :size="extraIcon.size" :type="extraIcon.type" />
-			</view>
+			</view>      
 			<view class="uni-list-item__content">
 				<view class="uni-list-item__content-title">{{ title }}</view>
 				<view v-if="note" class="uni-list-item__content-note">{{ note }}</view>
@@ -118,7 +119,7 @@
 	}
 
 	.uni-list-item--hover {
-		background-color: #f1f1f1
+		background-color: #F1F1F1
 	}
 
 	.uni-list-item__container {
@@ -173,7 +174,7 @@
 	}
 
 	.uni-list-item__extra {
-		width: 25%;
+		width: 15%;
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
