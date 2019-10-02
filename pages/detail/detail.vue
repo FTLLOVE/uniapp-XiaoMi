@@ -40,6 +40,9 @@
         </uni-list-item>
       </view>
     </view>
+    
+    <!-- 用户评论 -->
+    <detail-comments :comments="comments"></detail-comments>
   </view>
 </template>
 

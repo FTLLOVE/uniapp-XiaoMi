@@ -36,7 +36,7 @@
   		
   		<view class="d-flex a-center j-center py-2 mt-2 text-primary"
   		hover-class="bg-light-secondary">
-  			更多样式 <view class="iconfont icon-you"></view>
+  			更多评论 <view class="iconfont icon-you"></view>
   		</view>
   		
   	</view>
